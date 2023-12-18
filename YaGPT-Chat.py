@@ -43,9 +43,9 @@ def main():
         ''')
     global  yagpt_folder_id, yagpt_api_id, yagpt_api_key
 
-    folder_id = ""
-    api_id = ""
-    api_key = ""
+    # folder_id = ""
+    # api_id = ""
+    # api_key = ""
 
     # использовать системные переменные из облака streamlit (secrets)
     
