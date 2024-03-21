@@ -41,7 +41,7 @@ def main():
         - [Streamlit](https://streamlit.io/)
         - [LangChain](https://python.langchain.com/)
         ''')
-    global  yagpt_folder_id, yagpt_api_id, yagpt_api_key
+    global  yagpt_folder_id, yagpt_api_key
 
     # folder_id = ""
     # api_id = ""
@@ -50,7 +50,7 @@ def main():
     # использовать системные переменные из облака streamlit (secrets)
     
     yagpt_folder_id = st.secrets["yagpt_folder_id"]
-    yagpt_api_id = st.secrets["yagpt_api_id"]
+    # yagpt_api_id = st.secrets["yagpt_api_id"]
     yagpt_api_key = st.secrets["yagpt_api_key"]
 
     # yagpt_folder_id = st.sidebar.text_input("YAGPT_FOLDER_ID", type='password', value=folder_id)
@@ -62,7 +62,7 @@ def main():
     yagpt_max_tokens = st.sidebar.slider("YaGPT макс. кол-во токенов", 200, 7400, 5000)
 
     # Выводим предупреждение, если пользователь не указал свои учетные данные
-    if not yagpt_api_key or not yagpt_folder_id or not yagpt_api_id:
+    if not yagpt_api_key or not yagpt_folder_id:
         st.warning(
             "Пожалуйста, задайте свои учетные данные (в secrets/.env или в раскрывающейся панели слева) для запуска этого приложения.")
 
